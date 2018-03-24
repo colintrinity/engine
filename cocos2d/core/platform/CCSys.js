@@ -524,7 +524,8 @@ cc.create3DContext = function (canvas, opt_attribs, opt_contextType) {
         }
     }
     else {
-        return cc.create3DContext(canvas, opt_attribs, "webgl") || 
+        return cc.create3DContext(canvas, opt_attribs, "webgl2") ||
+               cc.create3DContext(canvas, opt_attribs, "webgl") || 
                cc.create3DContext(canvas, opt_attribs, "experimental-webgl") ||
                cc.create3DContext(canvas, opt_attribs, "webkit-3d") ||
                cc.create3DContext(canvas, opt_attribs, "moz-webgl") ||
